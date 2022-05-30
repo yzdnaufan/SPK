@@ -24,38 +24,16 @@
 </head>
     <body class="websiteBody">
       <div class="Page-outer">
-    <div
-      id="Page"
-      data-name="Page"
-      class="Page"
-    >
+    <div id="Page" data-name="Page" class="Page">
       <div class="Desktop-outer">
-      <div
-        id="Desktop"
-        data-name="Desktop"
-        class="Desktop"
-      >
+      <div id="Desktop" data-name="Desktop" class="Desktop">
         <div class="Group-18-outer">
-        <div
-          id="Group-18"
-          data-name="Group 18"
-          class="Group-18"
-        >
+        <div id="Group-18" data-name="Group 18" class="Group-18">
           <div class="Bg-1-outer">
-          <img
-            id="Bg-1"
-            data-name="Bg 1"
-            alt="Bg 1"
-            class="Bg-1"
-          />
+          <img id="Bg-1" data-name="Bg 1" alt="Bg 1" class="Bg-1"/>
           </div>
           <div class="card-1-outer">
-          <div
-            id="card-1"
-            data-name="card"
-            alt="card"
-            class="card-1"
-          >
+          <div id="card-1" data-name="card" alt="card" class="card-1">
           </div>
           </div>
           <div class="Ellipse-1-outer">
@@ -92,12 +70,27 @@
         ><div key="0">Predict CO2 Emission of Vehicles</div>
         </div>
         </div>
+        <form action="{{url_for('predict')}}" method="post">
+          <label for="EngineSize">Engine Size:</label>
+          <input type="text" id="EngineSize" name="Engine-Size" placeholder="Engine Size"><br><br>
+          <label for="Cylinders">Cylinders:</label>
+          <input type="text" id="Cylinders" name="Cylinders" placeholder="Cylinders"><br><br>
+          <label for="Fuel">Transmission:</label>
+          <input type="text" id="Transmission" name="Transmission", placeholder="1 for manual 0 for Automatic"><br><br>
+
+          <label for="Fuel">Fuel:</label>
+          <input type="text" id="Fuel" name="Fuel", placeholder="Fuel"><br><br>
+
+          
+          
+          <input type="submit" value="Submit">
+        </form>
         <div class="q000-1-outer">
         <div
           id="q000-1"
           data-name="000"
           class="q000-1"
-        ><div key="0">000</div>
+        > {{ prediction_text }}
         </div>
         </div>
         <div class="textbox-enginesize-1-outer">

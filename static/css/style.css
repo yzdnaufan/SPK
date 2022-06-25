@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url('../index/assets/images/Bg_1.png');
+  background-position: center; 
+  background-size: cover; 
+}
+
+.title{
+  position: absolute;
+  position: center;
+  top: 5%;
+  left: 39%;
+  z-index: 100;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.subtitle{ 
+  top: 25%;
+  left: 37%;
+  position: absolute;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.box{
+  position: center;
+  width: 300px;
+  padding: 40px;
+  position:absolute;
+  top: 32%;
+  left: 35%;
+  text-align: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.3px);
+  -webkit-backdrop-filter: blur(9.3px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 3;
+}
+
+.box input[type = "text"]{
+  border: 0;
+  background: none;
+  display: block;
+  border: 2px transparent 50%;
+  padding: 10px 10px;
+  width: 300px;
+  margin: -13px;
+  outline: none;
+  transition: 0.25s;
+  /* textbox_cylinders */
+  background: linear-gradient(89.97deg, #6A69E8 3.12%, rgba(106, 105, 232, 0) 239.34%);
+  border-radius: 90px;
+  font-family: 'Inter';
+  font-style: normal;
+  color: rgb(255, 255, 255);
+}
+
+::placeholder {
+  color: white;
+  opacity: 50%;
+}
+
+.box input[type = "submit"]{
+  position: absolute;
+  left: 40%;
+  display: block;
+  border: 2px solid white;
+  padding: 10px 10px;
+  width: 100px;
+  margin: -13px;
+  outline: none;
+  transition: 0.25s;
+  background: none;
+  border-radius: 90px;
+  font-family: 'Inter';
+  font-style: normal;
+  color: rgb(255, 255, 255);
+}
+
+.box input[type = "submit"]:hover{
+  background: linear-gradient(205.22deg, #F1F9FF -27.08%, #6BB4ED 30.77%, #6A69E8 82.71%);
+  box-shadow: -21px 16px 33px rgba(255, 255, 255, 0.3), inset 4px -7px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 90px;
+}
+
+.result-container {
+  height: 250px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.result{
+  margin: 0;
+  position: absolute;
+  position: center;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.Ellipse-1{
+  position:absolute;
+  z-index:2;
+  width: 100px;
+  top: 50%;
+  left: 30%;
+  content:url('..\static\index\assets\images\Ellipse_1.png');
+}
+
+.Ellipse-2{
+  position:absolute;
+  z-index:2;
+  width: 70px;
+  top: 75%;
+  left: 62%;
+  content:url('..\static\index\assets\images\Ellipse_3.png');
+}

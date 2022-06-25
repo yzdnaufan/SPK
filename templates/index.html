@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html prefix="og: http://ogp.me/ns#" lang="en" style="height: 100%">
 
@@ -17,34 +16,25 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:900">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:500,900">
-  <link rel="stylesheet" type="text/css" href= {{ url_for("static",filename="index/index.css") }} >
+  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
     
   <script src= {{ url_for("static",filename="index/index.js") }} ></script>
       
 </head>
+
     <body class="websiteBody">
       <div class="Page-outer">
     <div id="Page" data-name="Page" class="Page">
-      <div class="Desktop-outer">
-      <div id="Desktop" data-name="Desktop" class="Desktop">
-        <div class="Group-18-outer">
-        <div id="Group-18" data-name="Group 18" class="Group-18">
-          <div class="Bg-1-outer">
-          <img id="Bg-1" data-name="Bg 1" alt="Bg 1" class="Bg-1"/>
-          </div>
-          <div class="card-1-outer">
-          <div id="card-1" data-name="card" alt="card" class="card-1">
-          </div>
-          </div>
-          <div class="Ellipse-1-outer">
-          <img
-            id="Ellipse-1"
-            data-name="Ellipse 1"
-            alt="Ellipse 1"
-            class="Ellipse-1"
-          />
-          </div>
-          <div class="Ellipse-2-outer">
+      <div class="Ellipse-1">
+        <img
+          id="Ellipse-1"
+          data-name="Ellipse 1"
+          alt="Ellipse 1"
+          class="Ellipse-1"
+        />
+        </div>
+
+        <div class="Ellipse-2">
           <img
             id="Ellipse-2"
             data-name="Ellipse 2"
@@ -52,113 +42,49 @@
             class="Ellipse-2"
           />
           </div>
+    </div>
         </div>
         </div>
-        <div class="PCEV-1-outer">
-        <div
-          id="PCEV-1"
-          data-name="PCEV"
-          class="PCEV-1"
-        ><div key="0">PCEV</div>
+        <div class="title">
+          <div
+            id="PCEV-1"
+            data-name="PCEV"
+            class="PCEV-1"
+          ><div key="0">PCEV</div>
+          </div>
         </div>
+        <div class="subtitle">
+          <div
+            id="Predict-CO2-Emission-1"
+            data-name="Predict CO2 Emission of Vehicles"
+            class="Predict-CO2-Emission-1"
+          ><div key="0">Predict CO2 Emission of Vehicles</div>
+          </div>
         </div>
-        <div class="Predict-CO2-Emission-1-outer">
-        <div
-          id="Predict-CO2-Emission-1"
-          data-name="Predict CO2 Emission of Vehicles"
-          class="Predict-CO2-Emission-1"
-        ><div key="0">Predict CO2 Emission of Vehicles</div>
-        </div>
-        </div>
-        <form action="{{url_for('predict')}}" method="post">
-          <label for="EngineSize">Engine Size:</label>
-          <input type="text" id="EngineSize" name="Engine-Size" placeholder="Engine Size"><br><br>
-          <label for="Cylinders">Cylinders:</label>
-          <input type="text" id="Cylinders" name="Cylinders" placeholder="Cylinders"><br><br>
-          <label for="Fuel">Transmission:</label>
-          <input type="text" id="Transmission" name="Transmission", placeholder="1 for manual 0 for Automatic"><br><br>
 
-          <label for="Fuel">Fuel:</label>
+        <form class="box" action="{{url_for('predict')}}" method="post">
+          <input type="text" id="EngineSize" name="Engine-Size" placeholder="Engine Size"><br><br>
+          <input type="text" id="Cylinders" name="Cylinders" placeholder="Cylinders"><br><br>
+          <input type="text" id="Transmission" name="Transmission", placeholder="1 for manual 0 for Automatic"><br><br>
           <input type="text" id="Fuel" name="Fuel", placeholder="Fuel"><br><br>
 
           
           
           <input type="submit" value="Submit">
         </form>
-        <div class="q000-1-outer">
-        <div
-          id="q000-1"
-          data-name="000"
-          class="q000-1"
-        > {{ prediction_text }} <br>
-        {{saran}}
-        </div>
-        </div>
-        <div class="textbox-enginesize-1-outer">
-        <div
-          id="textbox-enginesize-1"
-          data-name="textbox_enginesize"
-          alt="textbox_enginesize"
-          class="textbox-enginesize-1"
-        >
-        </div>
-        </div>
-        <div class="Engine-Size-1-outer">
-          <input
-            type="text"
-            placeholder="Engine Size"
-            id="Engine-Size-1"
-            data-name="Engine Size"
-            class="Engine-Size-1"
-          ><div key="0">Engine Size</div>
+        <div class="result-containter">
+          <div class="result">
+            {{ prediction_text }} <br>
+            {{saran}}
           </div>
-        <div class="textbox-cylinders-1-outer">
-        <div
-          id="textbox-cylinders-1"
-          data-name="textbox_cylinders"
-          alt="textbox_cylinders"
-          class="textbox-cylinders-1"
-        >
-        </div>
-        </div>
-        <div class="Cylinders-1-outer">
-          <input
-            type="text"
-            placeholder="Cylinders"
-            id="Cylinders-1"
-            data-name="Cylinders"
-            class="Cylinders-1"
-          ><div key="0">Cylinders</div>
-          </div>
-        <div class="textbox-fuel-1-outer">
-          <div
-            id="textbox-fuel-1"
-            data-name="textbox_fuel"
-            alt="textbox_fuel"
-            class="textbox-fuel-1"
-          >
-          </div>
-          </div>
-        <div class="Fuel-1-outer">
-          <input
-            type="text"
-            placeholder="Fuel"
-            id="Fuel-1"
-            data-name="Fuel"
-            class="Fuel-1"
-          ><div key="0">Fuel</div>
-          </div>
-      </div>
-      </div>
-    </div>
 
-        <div class="button-1">
-          <input type="image" src="/statuic/index/assets/images/button_1.png" name="predict" alt="submit"/> 
         </div>
+        
+        </div>
+
    
   </div>
   </div>
 
     </body>
   </html>
-  
